@@ -6,14 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.example.exercise_navigation.R
+import com.example.exercise_navigation.data.TransactionViewModel
 import kotlinx.android.synthetic.main.fragment_confirmation.*
-import kotlinx.android.synthetic.main.fragment_input_amount.*
 
-class FragmentConfirmation : Fragment() {
 
+class FragmentConfirmation : Fragment(),View.OnClickListener {
+
+    private val transactionViewModel by activityViewModels<TransactionViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -24,11 +28,27 @@ class FragmentConfirmation : Fragment() {
         return inflater.inflate(R.layout.fragment_confirmation, container, false)
     }
 
-    @SuppressLint("SetTextI18n")
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        nameConfirmation.text = arguments?.getString("username")
-        amountConfirmation.text = "Rp. : " + arguments?.getString("amount")
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        doneButton.setOnClickListener(this)
+        showTransactionData()
     }
 
+    private fun showTransactionData() {
+        val name = "Sent to ${transactionViewModel.userName}"
+        val amount = "Rp. ${transactionViewModel.amount}"
+
+        sent_to_recipient_name_text.text = name
+        sent_to_recipient_account_text.text = transactionViewModel.accountNumber
+        sent_to_recipient_amount_text.text = amount
+        sent_to_recipient_bank_text.text = transactionViewModel.bankName
+    }
+
+    override fun onClick(v: View?) {
+        when (v) {
+            doneButton -> {
+                activity?.finish()
+            }
+        }
+    }
 }

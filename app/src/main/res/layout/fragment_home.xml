@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".screens.HomeFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        app:cardElevation="10dp"
-        app:cardCornerRadius="15dp"
         android:layout_height="200dp"
+        android:layout_margin="5dp"
         app:cardBackgroundColor="@android:color/holo_blue_bright"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_gravity="center"
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/profile_pict_view"
-                android:layout_gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_baseline_account_box_24" />
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_account_circle_24" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Disebud"
-                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/Disebud"
+                android:textColor="#2A2535"
                 android:textSize="40dp" />
         </LinearLayout>
 
@@ -60,6 +61,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="@android:color/holo_red_dark"
             android:text="Transfer"
+            android:textColor="#FFFFFF"
             app:cardElevation="10dp"
             app:cornerRadius="15dp" />
 
@@ -69,6 +71,7 @@
             android:layout_height="100dp"
             android:layout_margin="5dp"
             android:text="History Transaction"
+            android:textColor="#FFFFFF"
             app:backgroundTint="@android:color/holo_orange_light"
             app:cardElevation="10dp"
             app:cornerRadius="15dp" />
@@ -79,9 +82,12 @@
             android:layout_height="100dp"
             android:layout_margin="5dp"
             android:backgroundTint="@android:color/holo_green_light"
-            android:text="Balance"
+            android:text="BALANCE"
+            android:textColor="#FFFFFF"
             app:cardElevation="10dp"
-            app:cornerRadius="15dp" />
+            app:cornerRadius="15dp"
+            app:iconGravity="textEnd"
+            app:iconSize="20dp" />
 
     </LinearLayout>
 

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Exercise_Navigation</string>
+    <string name="Disebud">Disebud</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="history_transaction">HISTORY TRANSACTION</string>
@@ -15,16 +16,20 @@
         <item name="bank_arrays">BTPN</item>
         <item name="bank_arrays">Permata</item>
     </string-array>
+
     <string name="account_number">Account Number</string>
     <string name="name">Name</string>
     <string name="next">next</string>
     <string name="image_icon">TODO</string>
     <string name="todo_home">TODO</string>
-    <string name="jution_candra_kirana">Jution Candra Kirana</string>
     <string name="amount">Amount</string>
     <string name="done">DONE</string>
     <string name="amount_confirmation">Amount Confirmation</string>
     <string name="name_confirmation">Name Confirmation</string>
     <string name="to">TO: ?</string>
     <string name="send">SEND</string>
+    <string name="default_sent_to_person">Sent to Person</string>
+    <string name="default_account_number">account number</string>
+    <string name="default_amount">Rp. amount</string>
+    <string name="default_bank">bank</string>
 </resources>
